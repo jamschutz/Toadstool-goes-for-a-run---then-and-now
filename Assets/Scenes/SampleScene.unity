@@ -1106,7 +1106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateX: 0
-  rotateY: 50
+  rotateY: 10
   maxDistance: {x: 0, y: 5.09, z: -16.97}
   minDistance: {x: 0, y: 2.55, z: -3.18}
   fadeInTime: 0.01
