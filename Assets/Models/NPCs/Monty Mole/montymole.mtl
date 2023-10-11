@@ -1,0 +1,8 @@
+newmtl mat_choropu
+Ka 0.5019608 0.5019608 0.5019608
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat_choropu.png
+map_Kd mat_choropu.png
+map_d mat_choropu.png

@@ -1,0 +1,298 @@
+<?xml version="1.0"?>
+<COLLADA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.4.1" xmlns="http://www.collada.org/2005/11/COLLADASchema">
+  <asset>
+    <created>2018-11-11T15:01:39.9932187-05:00</created>
+    <modified>2018-11-11T15:01:40.0832188-05:00</modified>
+  </asset>
+  <library_images>
+    <image id="parkSoccerBall">
+      <init_from>./parkSoccerBall.png</init_from>
+    </image>
+    <image id="parkSoccerBallShadow">
+      <init_from>./parkSoccerBallShadow.png</init_from>
+    </image>
+    <image id="parkSoccerBall_NRM">
+      <init_from>./parkSoccerBall.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="mtParkSoccerBall00t_mat_id" name="mtParkSoccerBall00t_mat">
+      <instance_effect url="#mtParkSoccerBall00t_eff_id" />
+    </material>
+    <material id="mtParkSoccerBallShadow00t_mat_id" name="mtParkSoccerBallShadow00t_mat">
+      <instance_effect url="#mtParkSoccerBallShadow00t_eff_id" />
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="mtParkSoccerBall00t_eff_id" name="mtParkSoccerBall00t_eff">
+      <profile_COMMON>
+        <newparam sid="mtParkSoccerBall00t_surf">
+          <surface type="2D">
+            <init_from>parkSoccerBall_NRM</init_from>
+            <format>PNG</format>
+          </surface>
+        </newparam>
+        <newparam sid="mtParkSoccerBall00t_samp">
+          <sampler2D>
+            <source>mtParkSoccerBall00t_surf</source>
+            <wrap_s>MIRROR</wrap_s>
+            <wrap_t>CLAMP</wrap_t>
+            <minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+            <magfilter>LINEAR</magfilter>
+            <mipfilter>LINEAR</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="mtParkSoccerBall00t_tech">
+          <phong>
+            <diffuse>
+              <texture texture="mtParkSoccerBall00t_samp" texcoord="uv" />
+            </diffuse>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="mtParkSoccerBallShadow00t_eff_id" name="mtParkSoccerBallShadow00t_eff">
+      <profile_COMMON>
+        <newparam sid="mtParkSoccerBallShadow00t_surf">
+          <surface type="2D">
+            <init_from>parkSoccerBallShadow</init_from>
+            <format>PNG</format>
+          </surface>
+        </newparam>
+        <newparam sid="mtParkSoccerBallShadow00t_samp">
+          <sampler2D>
+            <source>mtParkSoccerBallShadow00t_surf</source>
+            <wrap_s>MIRROR</wrap_s>
+            <wrap_t>MIRROR</wrap_t>
+            <minfilter>LINEAR_MIPMAP_NEAREST</minfilter>
+            <magfilter>LINEAR</magfilter>
+            <mipfilter>LINEAR</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="mtParkSoccerBallShadow00t_tech">
+          <phong>
+            <diffuse>
+              <texture texture="mtParkSoccerBallShadow00t_samp" texcoord="uv" />
+            </diffuse>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="_0_0_geo_id" name="_0_0">
+      <mesh>
+        <source id="_0_0_Position_id" name="_0_0_Position">
+          <float_array id="_0_0_Position_array_id" count="189">0.0801715 -0.136396 -0.02604821 0 -0.160343 0 0 -0.136396 -0.08429721 0.0495486 -0.136396 0.06819969 0 -0.160343 0 0.0801715 -0.136396 -0.02604821 -0.0495488 -0.136396 0.06819969 0 -0.160343 0 0.0495486 -0.136396 0.06819969 -0.0801714 -0.136396 -0.02604821 0 -0.160343 0 -0.0495488 -0.136396 0.06819969 0 -0.136396 -0.08429721 0 -0.160343 0 -0.0801714 -0.136396 -0.02604821 0.0801715 0.136396 0.02605119 0 0.160343 2.39015E-06 0 0.136396 0.08429929 0.136396 0.0717074 0.04431969 0.0801715 0.0842971 0.1103484 0 0.0717074 0.1434174 0.0495486 0.136396 -0.06819731 0 0.160343 2.39015E-06 0.0801715 0.136396 0.02605119 0.0842972 0.0717074 -0.1160246 0.12972 0.0842971 -0.04214731 -0.0495488 0.136396 -0.06819731 0 0.160343 2.39015E-06 0.0495486 0.136396 -0.06819731 -0.0842971 0.0717074 -0.1160246 0 0.0842971 -0.1363926 -0.0801714 0.136396 0.02605119 0 0.160343 2.39015E-06 -0.0495488 0.136396 -0.06819731 -0.136396 0.0717074 0.04431969 -0.12972 0.0842971 -0.04214731 0 0.136396 0.08429929 0 0.160343 2.39015E-06 -0.0801714 0.136396 0.02605119 0 0.0717074 0.1434174 -0.0801714 0.0842971 0.1103484 0.0842972 -0.0717073 0.1160274 0.12972 -0.0842971 0.04215089 0.136396 -0.0717073 -0.04431461 0.0801715 -0.0842971 -0.1103426 0 -0.0717073 -0.1434146 -0.0801714 -0.0842971 -0.1103426 -0.136396 -0.0717073 -0.04431461 -0.12972 -0.0842971 0.04215089 -0.0842971 -0.0717073 0.1160274 0 -0.0842971 0.1363974 0.0842972 -0.0717073 0.1160274 0.0495486 0 0.1524974 0.12972 0 0.09424909 0.160343 0 2.39015E-06 0.12972 0 -0.09424671 0.0495486 0 -0.1524926 -0.0495488 0 -0.1524926 -0.12972 0 -0.09424671 -0.160343 0 2.39015E-06 -0.12972 0 0.09424909 -0.0495488 0 0.1524974 0.0495486 0 0.1524974</float_array>
+          <technique_common>
+            <accessor source="#_0_0_Position_array_id" count="63" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="_0_0_TexCoord0_id" name="_0_0_TexCoord0">
+          <float_array id="_0_0_TexCoord0_array_id" count="126">0.8907803 0.8120453 0.7892383 0.9674331 0.6914733 0.8116095 1.324597 0.8129169 1.211386 0.9683047 1.101806 0.8125295 -0.2902929 0.8094305 -0.396774 0.9647698 -0.4994781 0.8089947 0.09350385 0.8103021 -0.008038134 0.9656414 -0.1058032 0.8098663 0.4921663 0.8111737 0.3905759 0.9665615 0.2928109 0.8107379 1.296997 0.1905909 1.398539 0.03520316 1.496304 0.1910268 1.195455 0.3459303 1.394762 0.3463661 1.58666 0.3468504 0.8983342 0.1897193 0.9999246 0.03433155 1.09769 0.1901551 0.7967922 0.3450587 0.9960992 0.3454945 0.4997202 0.1887993 0.6012622 0.03345995 0.6990272 0.1892835 0.3981782 0.3441871 0.5974852 0.3446229 0.1011062 0.1879277 0.2026482 0.03258834 0.3004132 0.1883635 -0.0004358025 0.3433155 0.1988712 0.3437513 -0.2975563 0.1870561 -0.1959659 0.03171674 -0.09820083 0.1874919 -0.3990982 0.3424439 -0.1997912 0.3428797 1.413162 0.6575775 1.201507 0.6571417 0.9923223 0.6567059 0.7930152 0.6562701 0.5937083 0.6557859 0.3944013 0.6553501 0.1950458 0.6549143 -0.00426118 0.6544785 -0.1961595 0.6540427 -0.4028752 0.6536069 -0.6021822 0.6531711 1.499935 0.5021898 1.29322 0.5017539 1.093864 0.5013181 0.8945572 0.5008823 0.6952502 0.5004465 0.4959432 0.5000107 0.2966362 0.4995749 0.09732922 0.4991391 -0.1020262 0.4986549 -0.3013332 0.4982191 -0.5006402 0.4977833</float_array>
+          <technique_common>
+            <accessor source="#_0_0_TexCoord0_array_id" count="63" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="_0_0_Normal_id" name="_0_0_Normal">
+          <float_array id="_0_0_Normal_array_id" count="189">0.502816 -0.8485019 -0.1649865 0 -1 0 0 -0.8497617 -0.527167 0.3073535 -0.8511328 0.4255664 0 -1 0 0.502816 -0.8485019 -0.1649865 -0.3073535 -0.8511328 0.4255664 0 -1 0 0.3073535 -0.8511328 0.4255664 -0.502816 -0.8485019 -0.1649865 0 -1 0 -0.3073535 -0.8511328 0.4255664 0 -0.8497617 -0.527167 0 -1 0 -0.502816 -0.8485019 -0.1649865 0.502816 0.8485019 0.1649865 0 1 0 0 0.8497617 0.527167 0.8501565 0.4486937 0.2755137 0.503547 0.5271507 0.6845091 0 0.4472136 0.8944272 0.3073535 0.8511328 -0.4255664 0 1 0 0.502816 0.8485019 0.1649865 0.5263692 0.4478067 -0.7227756 0.8095693 0.5266131 -0.2593766 -0.3073535 0.8511328 -0.4255664 0 1 0 0.3073535 0.8511328 -0.4255664 -0.5263692 0.4478067 -0.7227756 0 0.527167 -0.8497617 -0.502816 0.8485019 0.1649865 0 1 0 -0.3073535 0.8511328 -0.4255664 -0.8501565 0.4486937 0.2755137 -0.8095693 0.5266131 -0.2593766 0 0.8497617 0.527167 0 1 0 -0.502816 0.8485019 0.1649865 0 0.4472136 0.8944272 -0.503547 0.5271507 0.6845091 0.5263692 -0.4478067 0.7227756 0.8095693 -0.5266131 0.2593766 0.8501565 -0.4486937 -0.2755137 0.503547 -0.5271507 -0.6845091 0 -0.4472136 -0.8944272 -0.503547 -0.5271507 -0.6845091 -0.8501565 -0.4486937 -0.2755137 -0.8095693 -0.5266131 0.2593766 -0.5263692 -0.4478067 0.7227756 0 -0.527167 0.8497617 0.5263692 -0.4478067 0.7227756 0.3067729 0 0.9517828 0.8083965 0 0.5886382 1 0 0 0.8083965 0 -0.5886382 0.3067729 0 -0.9517828 -0.3067729 0 -0.9517828 -0.8083965 0 -0.5886382 -1 0 0 -0.8083965 0 0.5886382 -0.3067729 0 0.9517828 0.3067729 0 0.9517828</float_array>
+          <technique_common>
+            <accessor source="#_0_0_Normal_array_id" count="63" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="_0_0_Tangent_id" name="_0_0_Tangent">
+          <float_array id="_0_0_Tangent_array_id" count="189">0.661416 0.251968 0.700786 0.811022 0 0.582676 0.874014 -0.251968 0.409448 -0.464566 0.251968 0.850392 -0.307086 0 0.952754 -0.11811 -0.251968 0.960628 -0.952754 0.251968 -0.181102 -0.999998 0 0 -0.952754 -0.251968 0.181102 -0.125984 0.251968 -0.960628 -0.307086 0 -0.952754 -0.464566 -0.251968 -0.850392 0.874014 0.251968 -0.417322 0.811022 0 -0.59055 0.661416 -0.251968 -0.70866 -0.661416 0.251968 0.700786 -0.811022 0 0.582676 -0.874014 -0.251968 0.409448 -0.307086 0 0.952754 -0.811022 0 0.582676 -0.952754 -0.27559 0.133858 0.464566 0.251968 0.850392 0.307086 0 0.952754 0.11811 -0.251968 0.960628 0.811022 0 0.582676 0.307086 0 0.952754 0.952754 0.251968 -0.181102 0.999998 0 0 0.952754 -0.251968 0.181102 0.811022 0 -0.59055 0.999998 0 0 0.125984 0.251968 -0.960628 0.307086 0 -0.952754 0.464566 -0.251968 -0.850392 -0.307086 0 -0.952754 0.307086 0 -0.952754 -0.874014 0.251968 -0.417322 -0.811022 0 -0.59055 -0.661416 -0.251968 -0.70866 -0.976376 0.188976 -0.09448799 -0.811022 0 -0.59055 -0.732282 0.188976 0.653542 -0.307086 0 0.952754 0.307086 0 0.952754 0.811022 0 0.582676 0.999998 0 0 0.811022 0 -0.59055 0.307086 0 -0.952754 -0.307086 0 -0.952754 -0.811022 0 -0.59055 -0.999998 0 0 -0.850392 -0.27559 0.448818 -0.952754 -0.047244 0.307086 -0.59055 0.047244 0.811022 0 -0.047244 0.999998 0.59055 0.047244 0.811022 0.952754 -0.047244 0.307086 0.952754 0.047244 -0.307086 0.59055 -0.047244 -0.811022 0 0.047244 -0.999998 -0.59055 -0.047244 -0.811022 -0.952754 0.047244 -0.307086 -0.952754 -0.047244 0.307086</float_array>
+          <technique_common>
+            <accessor source="#_0_0_Tangent_array_id" count="63" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="_0_0_vtx_id">
+          <input semantic="POSITION" source="#_0_0_Position_id" />
+          <input semantic="NORMAL" source="#_0_0_Normal_id" />
+          <input semantic="TANGENT" source="#_0_0_Tangent_id" />
+        </vertices>
+        <triangles material="Mdl_0_Mtl_mtParkSoccerBall00t" count="80">
+          <input semantic="VERTEX" source="#_0_0_vtx_id" offset="0" />
+          <input semantic="TEXCOORD" source="#_0_0_TexCoord0_id" offset="0" set="0" />
+          <p>61 39 40 61 62 39 61 40 60 61 50 62 61 60 49 61 49 50 39 36 40 62 50 51 60 48 49 60 40 34 60 59 48 60 34 59 36 38 40 36 37 38 38 34 40 50 8 51 50 49 6 50 6 8 48 59 47 48 11 49 48 47 9 48 9 11 34 35 59 34 31 35 6 7 8 47 59 58 47 58 46 47 46 14 59 35 58 9 10 11 31 33 35 31 32 33 46 12 14 46 58 57 46 45 12 46 57 45 35 33 29 35 29 58 58 29 57 14 12 13 45 57 56 45 56 44 45 44 2 29 30 57 29 26 30 57 30 56 44 0 2 44 56 55 44 43 0 44 55 43 26 28 30 26 27 28 2 0 1 56 24 55 56 30 24 30 28 24 43 55 54 43 54 42 43 42 5 24 25 55 24 21 25 55 25 54 42 3 5 42 54 53 42 41 3 42 53 41 21 23 25 21 22 23 5 3 4 54 18 53 54 25 18 25 23 18 41 53 52 18 19 53 18 15 19 53 19 52 15 17 19 15 16 17 52 19 20 20 19 17</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="_1_0_geo_id" name="_1_0">
+      <mesh>
+        <source id="_1_0_Position_id" name="_1_0_Position">
+          <float_array id="_1_0_Position_array_id" count="12">-0.211776 -0.160343 0.211776 0.211776 -0.160343 0.211776 -0.211776 -0.160343 -0.211776 0.211776 -0.160343 -0.211776</float_array>
+          <technique_common>
+            <accessor source="#_1_0_Position_array_id" count="4" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="_1_0_TexCoord0_id" name="_1_0_TexCoord0">
+          <float_array id="_1_0_TexCoord0_array_id" count="8">0 0 1 0 0 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#_1_0_TexCoord0_array_id" count="4" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="_1_0_vtx_id">
+          <input semantic="POSITION" source="#_1_0_Position_id" />
+        </vertices>
+        <triangles material="Mdl_0_Mtl_mtParkSoccerBallShadow00t" count="2">
+          <input semantic="VERTEX" source="#_1_0_vtx_id" offset="0" />
+          <input semantic="TEXCOORD" source="#_1_0_TexCoord0_id" offset="0" set="0" />
+          <p>1 2 0 1 3 2</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers>
+    <controller id="_0_0_ctrl_id" name="_0_0_ctrl">
+      <skin source="#_0_0_geo_id">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="_0_0_ctrl_names_id" name="_0_0_ctrl_names">
+          <Name_array id="_0_0_ctrl_names_array_id" count="3">parkSoccerBallRoot parkSoccerBall parkSoccerBallShadow</Name_array>
+          <technique_common>
+            <accessor source="#_0_0_ctrl_names_array_id" count="3" stride="1">
+              <param name="JOINT" type="Name" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="_0_0_ctrl_poses_id" name="_0_0_ctrl_poses">
+          <float_array id="_0_0_ctrl_poses_array_id" count="48">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 -2.39015E-06 0 0 0 1 1 0 0 0 0 1 0 0.160343 0 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#_0_0_ctrl_poses_array_id" count="3" stride="16">
+              <param name="TRANSFORM" type="float4x4" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="_0_0_ctrl_weights_id" name="_0_0_ctrl_weights">
+          <float_array id="_0_0_ctrl_weights_array_id" count="1">1</float_array>
+          <technique_common>
+            <accessor source="#_0_0_ctrl_weights_array_id" count="1" stride="1">
+              <param name="WEIGHT" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#_0_0_ctrl_names_id" />
+          <input semantic="INV_BIND_MATRIX" source="#_0_0_ctrl_poses_id" />
+        </joints>
+        <vertex_weights count="63">
+          <input semantic="JOINT" source="#_0_0_ctrl_names_id" offset="0" />
+          <input semantic="WEIGHT" source="#_0_0_ctrl_weights_id" offset="1" />
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+          <v>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="_1_0_ctrl_id" name="_1_0_ctrl">
+      <skin source="#_1_0_geo_id">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="_1_0_ctrl_names_id" name="_1_0_ctrl_names">
+          <Name_array id="_1_0_ctrl_names_array_id" count="3">parkSoccerBallRoot parkSoccerBall parkSoccerBallShadow</Name_array>
+          <technique_common>
+            <accessor source="#_1_0_ctrl_names_array_id" count="3" stride="1">
+              <param name="JOINT" type="Name" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="_1_0_ctrl_poses_id" name="_1_0_ctrl_poses">
+          <float_array id="_1_0_ctrl_poses_array_id" count="48">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 -2.39015E-06 0 0 0 1 1 0 0 0 0 1 0 0.160343 0 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#_1_0_ctrl_poses_array_id" count="3" stride="16">
+              <param name="TRANSFORM" type="float4x4" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="_1_0_ctrl_weights_id" name="_1_0_ctrl_weights">
+          <float_array id="_1_0_ctrl_weights_array_id" count="1">1</float_array>
+          <technique_common>
+            <accessor source="#_1_0_ctrl_weights_array_id" count="1" stride="1">
+              <param name="WEIGHT" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#_1_0_ctrl_names_id" />
+          <input semantic="INV_BIND_MATRIX" source="#_1_0_ctrl_poses_id" />
+        </joints>
+        <vertex_weights count="4">
+          <input semantic="JOINT" source="#_1_0_ctrl_names_id" offset="0" />
+          <input semantic="WEIGHT" source="#_1_0_ctrl_weights_id" offset="1" />
+          <vcount>1 1 1 1</vcount>
+          <v>2 0 2 0 2 0 2 0</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+  </library_controllers>
+  <library_visual_scenes>
+    <visual_scene id="parkSoccerBall_00_id" name="parkSoccerBall_00">
+      <node id="parkSoccerBallRoot_bone_id" name="parkSoccerBallRoot" sid="parkSoccerBallRoot" type="JOINT">
+        <translate sid="translate">0 0 0</translate>
+        <rotate sid="rotateZ">0 0 1 0</rotate>
+        <rotate sid="rotateY">0 1 0 0</rotate>
+        <rotate sid="rotateX">1 0 0 0</rotate>
+        <scale sid="scale">1 1 1</scale>
+        <node id="parkSoccerBall_bone_id" name="parkSoccerBall" sid="parkSoccerBall" type="JOINT">
+          <translate sid="translate">0 0 2.39015E-06</translate>
+          <rotate sid="rotateZ">0 0 1 0</rotate>
+          <rotate sid="rotateY">0 1 0 0</rotate>
+          <rotate sid="rotateX">1 0 0 0</rotate>
+          <scale sid="scale">1 1 1</scale>
+        </node>
+        <node id="parkSoccerBallShadow_bone_id" name="parkSoccerBallShadow" sid="parkSoccerBallShadow" type="JOINT">
+          <translate sid="translate">0 -0.160343 0</translate>
+          <rotate sid="rotateZ">0 0 1 0</rotate>
+          <rotate sid="rotateY">0 1 0 0</rotate>
+          <rotate sid="rotateX">1 0 0 0</rotate>
+          <scale sid="scale">1 1 1</scale>
+        </node>
+      </node>
+      <node id="_0_0_node_id" name="_0_0_node" type="NODE">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_controller url="#_0_0_ctrl_id">
+          <skeleton>#parkSoccerBallRoot_bone_id</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Mdl_0_Mtl_mtParkSoccerBall00t" target="#mtParkSoccerBall00t_mat_id" />
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+      </node>
+      <node id="_1_0_node_id" name="_1_0_node" type="NODE">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_controller url="#_1_0_ctrl_id">
+          <skeleton>#parkSoccerBallRoot_bone_id</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Mdl_0_Mtl_mtParkSoccerBallShadow00t" target="#mtParkSoccerBallShadow00t_mat_id" />
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#parkSoccerBall_00_id" />
+  </scene>
+</COLLADA>
