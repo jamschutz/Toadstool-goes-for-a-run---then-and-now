@@ -1,0 +1,658 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--SM64DS Editor v2.3.5 2017-07-05-->
+<COLLADA version="1.4.1" xmlns="http://www.collada.org/2005/11/COLLADASchema">
+	<asset>
+		<contributor>
+			<author>Fiachra</author>
+			<authoring_tool>SM64DS Editor v2.3.5 2017-07-05</authoring_tool>
+		</contributor>
+		<created>2018-01-15T16:31:32</created>
+		<modified>2018-01-15T16:31:32</modified>
+		<unit name="meter" meter="1" />
+		<up_axis>Y_UP</up_axis>
+	</asset>
+	<library_images>
+		<image id="choropu_cmp4-img" name="choropu_cmp4-img">
+			<init_from>choropu_cmp4.png</init_from>
+		</image>
+	</library_images>
+	<library_effects>
+		<effect id="mat_choropu-effect">
+			<profile_COMMON>
+				<newparam sid="choropu_cmp4-img-surface">
+					<surface type="2D">
+						<init_from>choropu_cmp4-img</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="choropu_cmp4-img-sampler">
+					<sampler2D>
+						<source>choropu_cmp4-img-surface</source>
+					</sampler2D>
+				</newparam>
+				<technique sid="common">
+					<phong>
+						<emission>
+							<color sid="emission">0 0 0 1.0</color>
+						</emission>
+						<ambient>
+							<color sid="ambient">0.5176471 0.5176471 0.5176471 1.0</color>
+						</ambient>
+						<diffuse>
+							<texture texture="choropu_cmp4-img-sampler" texcoord="UVMap" />
+						</diffuse>
+						<specular>
+							<color sid="specular">0 0 0 1.0</color>
+						</specular>
+						<transparency>
+							<float sid="transparency">1</float>
+						</transparency>
+					</phong>
+				</technique>
+				<extra>
+					<technique profile="GOOGLEEARTH">
+						<double_sided>1</double_sided>
+					</technique>
+				</extra>
+				<extra>
+					<technique profile="SM64DSe">
+						<lights>1 0 0 0</lights>
+						<environment_mapping>0</environment_mapping>
+						<double_sided>1</double_sided>
+						<tex_tiling>flip flip</tex_tiling>
+						<tex_scale>1 1</tex_scale>
+						<tex_rotate>0</tex_rotate>
+						<tex_translate>0 0</tex_translate>
+						<fog_enable>0</fog_enable>
+					</technique>
+				</extra>
+			</profile_COMMON>
+			<extra>
+				<technique profile="MAX3D">
+					<double_sided>1</double_sided>
+				</technique>
+			</extra>
+		</effect>
+	</library_effects>
+	<library_materials>
+		<material id="mat_choropu-material" name="mat_choropu">
+			<instance_effect url="#mat_choropu-effect" />
+		</material>
+	</library_materials>
+	<library_geometries>
+		<geometry id="all_root-mesh" name="all_root-mesh">
+			<mesh>
+				<source id="all_root-mesh-positions">
+					<float_array id="all_root-mesh-positions-array" count="585">6.697754 7.995606 3.719727 7.552246 3.891602 1.25 6.689941 6.794434 -2.228516 5.408203 2.238281 -4.967285 5.532715 6.16748 -4.69873 2.29997E-07 2.238281 -6.640137 5.824628E-08 6.16748 -7.029297 -5.532715 6.16748 -4.69873 -1.02726E-07 9.850098 -5.723633 -4.030762 9.995605 -3.928711 -1.313263E-07 10.50439 -5.647949 -3.868164 10.72217 -3.885254 -2.584265E-07 13.41211 -5.265137 -3.781739 13.63281 -3.437988 -2.945801 15.85986 -2.882813 -5.039551 14.20508 0.4770508 -3.935547 16.07373 0.300293 -3.71045 14.7168 3.004883 -2.705567 16.40137 2.413086 4.030762 9.995605 -3.928711 5.981445 9.757324 -1.388184 3.868164 10.72217 -3.885254 5.758301 11.3335 0.8740234 3.781738 13.63281 -3.437988 5.039551 14.20508 0.4770508 2.9458 15.85986 -2.882813 3.935546 16.07373 0.300293 1.568359 17.47754 0.2490234 2.705566 16.40137 2.413086 -3.982475E-07 16.61084 3.141602 -3.308875E-07 15.06982 4.559082 6.364747 0.6420903 0.1616211 2.88905E-07 0.890625 -8.199219 -5.408203 2.238281 -4.967285 -6.689941 6.794433 -2.228516 -5.981445 9.757324 -1.388184 -6.364746 0.6420894 0.1616211 3.328084E-07 -0.1137695 4.702637 -5.067383 4.53418 5.660156 2.034885E-07 2.844727 7.753418 3.493923E-08 6.700684 7.965332 5.067383 4.53418 5.660156 4.911621 7.185547 5.708496 6.697754 7.995606 3.719727 6.11084 10.72705 2.470215 -3.601494E-07 15.73926 -4.149902 -4.158771E-07 17.01416 -2.421387 -1.56836 17.47754 0.2490234 6.11084 10.72705 2.470215 4.952148 11.41943 3.64209 4.940918 10.69336 3.945313 -1.56042E-07 11.06982 6.100098 -1.322227E-07 10.5249 6.191406 -4.940918 10.69336 3.945313 0.961313 0.6049805 -1.859199 2.07905 -0.03710938 5.929984 2.908621 2.279297 -1.979633 5.427815 2.78125 4.214004 8.899405 -0.03710938 2.373966 6.435814 2.225098 5.984025 8.995994 -0.03710938 6.408087 5.396355 -0.03710938 8.166889 4.92334 11.41846 3.661621 4.77002 12.69189 3.330078 4.656738 12.50781 5.557617 3.505371 13.59766 3.540527 3.000976 13.64355 6.138184 -2.791724E-07 13.88672 4.72998 -2.287591E-07 12.7334 5.445801 6.689941 6.794434 -2.228516 5.981445 9.757324 -1.388184 12.55029 6.902832 -1.116211 11.8335 9.691895 1.25 13.50098 8.189453 1.25 12.55029 6.902832 3.612305 14.57666 6.189941 3.072266 -0.9613125 0.6049806 -1.859199 -2.90862 2.279297 -1.979633 -2.079049 -0.03710973 5.929984 -5.427815 2.78125 4.214004 -6.435814 2.225097 5.984025 -8.899405 -0.03710961 2.373966 -8.995993 -0.03710985 6.408087 -3.751953 10.40332 4.591309 -1.50293 11.0498 5.467773 -2.653809 11.81592 6.896484 -3.000977 13.64355 6.138184 -3.505372 13.59766 3.540527 -6.689941 6.794433 -2.228516 -12.55029 6.902832 -1.116211 -5.981445 9.757324 -1.388184 -11.8335 9.691895 1.25 -6.11084 10.72705 2.470215 -12.55029 6.902832 3.612305 -6.697754 7.995605 3.719727 -4.940918 10.69336 3.945313 -6.11084 10.72705 2.470215 -4.911621 7.185547 5.708496 -6.697754 7.995605 3.719727 -7.552246 3.891601 1.25 -5.758301 11.3335 0.8740234 -6.11084 10.72705 2.470215 -4.952148 11.41943 3.64209 -3.161819E-07 14.7334 4.689453 -1.208985 13.7168 4.538574 -3.38123E-07 15.23535 5.845215 -2.710405E-07 13.70068 6.633301 1.208984 13.7168 4.538574 -2.398791E-07 12.98779 5.362305 3.751953 10.40332 4.591309 2.653808 11.81592 6.896484 1.50293 11.0498 5.467773 -6.697754 7.995605 3.719727 -7.552246 3.891601 1.25 -6.364746 0.6420894 0.1616211 -2.705567 16.40137 2.413086 -3.71045 14.7168 3.004883 -3.308875E-07 15.06982 4.559082 -1.56042E-07 11.06982 6.100098 3.710449 14.7168 3.004883 -4.77002 12.69189 3.330078 -4.656738 12.50781 5.557617 -4.92334 11.41846 3.661621 6.364747 0.6420903 0.1616211 7.552246 3.891602 1.25 -1.322227E-07 10.5249 6.191406 0.5410155 10.37451 5.358398 1.094238 11.46729 5.458008 0.5410155 10.45801 6.842285 -2.331559E-07 12.83398 5.443848 -0.5410157 10.45801 6.842285 -13.50098 8.189452 1.25 -14.57666 6.18994 -0.2617188 -14.57666 6.18994 3.072266 5.758301 11.3335 0.8740234 4.952148 11.41943 3.64209 -0.5410157 10.37451 5.358398 -1.094238 11.46729 5.458008 6.697754 7.995606 3.719727 6.689941 6.794434 -2.228516 12.55029 6.902832 3.612305 12.55029 6.902832 -1.116211 -8.995993 -0.03710985 6.408087 -8.899405 -0.03710961 2.373966 -5.396355 -0.03710985 8.166889 -2.079049 -0.03710973 5.929984 -4.935832 0.7719727 -1.904518 -6.364746 0.6420894 0.1616211 2.88905E-07 0.890625 -8.199219 3.328084E-07 -0.1137695 4.702637 6.364747 0.6420903 0.1616211 3.710449 14.7168 3.004883 -5.396355 -0.03710985 8.166889 2.07905 -0.03710938 5.929984 8.899405 -0.03710938 2.373966 5.396355 -0.03710938 8.166889 8.995994 -0.03710938 6.408087 14.57666 6.189941 -0.2617188 12.55029 6.902832 -1.116211 14.57666 6.189941 -0.2617188 12.55029 6.902832 3.612305 14.57666 6.189941 3.072266 6.11084 10.72705 2.470215 -14.57666 6.18994 3.072266 -14.57666 6.18994 -0.2617188 -12.55029 6.902832 3.612305 -12.55029 6.902832 -1.116211 -6.697754 7.995605 3.719727 -12.55029 6.902832 3.612305 -6.689941 6.794433 -2.228516 -12.55029 6.902832 -1.116211 4.940918 10.69336 3.945313 -4.952148 11.41943 3.64209 -5.758301 11.3335 0.8740234 2.07905 -0.03710938 5.929984 0.961313 0.6049805 -1.859199 4.935833 0.7719727 -1.904518 8.899405 -0.03710938 2.373966 -2.079049 -0.03710973 5.929984 -8.899405 -0.03710961 2.373966 -4.935832 0.7719727 -1.904518 -0.9613125 0.6049806 -1.859199 4.935833 0.7719727 -1.904518 6.697754 7.995606 3.719727 2.705566 16.40137 2.413086 1.313476 13.42578 7.745117 8.009766 10.79492 3.930664 7.472168 14.01758 2.394531 -1.313477 13.42578 7.745117 -7.472168 14.01758 2.394531 -8.009766 10.79492 3.930664 -11.25 1.554688 11.25 11.25 1.554688 11.25 11.25 1.554688 -11.25 -11.25 1.554688 -11.25</float_array>
+					<technique_common>
+						<accessor source="#all_root-mesh-positions-array" count="195" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="all_root-mesh-normals">
+					<float_array id="all_root-mesh-normals-array" count="585">0.009765625 -0.7246094 0.6894531 -0.1484375 -0.9863281 0.08398438 -0.2734375 -0.8457031 -0.4589844 -0.08203125 -0.78125 -0.6171875 0.203125 -0.5976563 -0.7753906 0.2714844 0 -0.9628906 0.1210938 0 -0.9921875 0.203125 0.5976563 -0.7753906 0.2714844 0 -0.9628906 0.203125 0.5976563 -0.7753906 0.1210938 0 -0.9921875 0.2363281 0.6523438 -0.7207031 0.2714844 0 -0.9628906 0.2558594 0.7578125 -0.5996094 0.6484375 0.5371094 -0.5371094 0.4023438 0.9140625 -0.0546875 0.6875 0.7226563 0.06835938 0.4492188 0.6679688 0.5917969 0.7441406 0.4355469 0.5058594 0.203125 -0.5976563 -0.7753906 0.5273438 -0.6484375 -0.5488281 0.2363281 -0.6523438 -0.7207031 0.4023438 -0.9140625 -0.0546875 0.2558594 -0.7578125 -0.5996094 0.4023438 -0.9140625 -0.0546875 0.6484375 -0.5371094 -0.5371094 0.6875 -0.7226563 0.06835938 0.9648438 -0.2617188 0.01757813 0.7441406 -0.4355469 0.5058594 0.859375 0 0.5117188 0.5332031 0 0.8457031 -0.765625 -0.6367188 0.09570313 -0.7207031 0 -0.6933594 -0.08203125 0.78125 -0.6171875 -0.2734375 0.8457031 -0.4589844 0.5273438 0.6484375 -0.5488281 -0.765625 0.6367188 0.09570313 -0.8984375 0 0.4394531 -0.2851563 0.6328125 0.7207031 -0.4082031 0 0.9121094 0.1308594 0 0.9921875 -0.2851563 -0.6328125 0.7207031 0.2988281 -0.5488281 0.7792969 0.009765625 -0.7246094 0.6894531 0.6113281 -0.6191406 0.4941406 0.640625 0 -0.7675781 0.9179688 0 -0.3984375 0.9648438 0.2617188 0.01757813 0.6113281 -0.6191406 0.4941406 0.4492188 -0.6679688 0.5917969 0.2988281 -0.5488281 0.7792969 0.3476563 0 0.9375 0.3476563 0 0.9375 0.2988281 0.5488281 0.7792969 -0.5566406 -0.3398438 0.7578125 -0.1308594 0.4042969 0.9042969 -0.1113281 0.9941406 -0.03320313 0.09179688 0.9960938 0.02734375 0.3300781 0.0390625 -0.9433594 0.4492188 0.8867188 0.109375 0.9414063 0.2324219 -0.2441406 0.6640625 -0.4785156 0.5742188 -0.203125 -0.9472656 0.25 0.5078125 -0.8574219 0.0859375 0.2070313 -0.8652344 0.4570313 0.8984375 -0.4335938 0.06640625 0.7480469 -0.1210938 0.6523438 0.859375 0 0.5117188 0.1835938 0 0.9824219 -0.2734375 -0.8457031 -0.4589844 0.5273438 -0.6484375 -0.5488281 0.4003906 0.1054688 -0.9101563 0.4589844 0.8867188 -0.05664063 0.6777344 0.734375 0 0.1542969 -0.4335938 0.8886719 0.8398438 0.2265625 0.4921875 -0.5566406 -0.3398438 -0.7578125 -0.1113281 0.9941406 0.03320313 -0.1308594 0.4042969 -0.9042969 0.09179688 0.9960938 -0.02734375 0.4492188 0.8867188 -0.109375 0.3300781 0.0390625 0.9433594 0.9414063 0.2324219 0.2441406 -0.6914063 0.4707031 0.5488281 -0.7070313 -0.3144531 0.6328125 -0.3242188 0.0390625 0.9453125 0.7480469 0.1210938 0.6523438 0.8984375 0.4335938 0.06640625 -0.2734375 0.8457031 -0.4589844 0.4003906 -0.1054688 -0.9101563 0.5273438 0.6484375 -0.5488281 0.4589844 -0.8867188 -0.05664063 0.6113281 0.6191406 0.4941406 0.1542969 0.4335938 0.8886719 0.009765625 0.7246094 0.6894531 0.2988281 0.5488281 0.7792969 0.6113281 0.6191406 0.4941406 0.2988281 0.5488281 0.7792969 0.009765625 0.7246094 0.6894531 -0.1484375 0.9863281 0.08398438 0.4023438 0.9140625 -0.0546875 0.6113281 0.6191406 0.4941406 0.4492188 0.6679688 0.5917969 0.9179688 0 -0.3984375 0.1523438 0.9570313 0.2460938 0.9863281 0 0.1621094 -0.4082031 0 0.9121094 0.1523438 -0.9570313 0.2460938 -0.8984375 0 0.4394531 -0.6914063 -0.4707031 0.5488281 -0.3242188 -0.0390625 0.9453125 -0.7070313 0.3144531 0.6328125 0.009765625 0.7246094 0.6894531 -0.1484375 0.9863281 0.08398438 -0.765625 0.6367188 0.09570313 0.7441406 0.4355469 0.5058594 0.4492188 0.6679688 0.5917969 0.5332031 0 0.8457031 0.3476563 0 0.9375 0.4492188 -0.6679688 0.5917969 0.5078125 0.8574219 0.0859375 0.2070313 0.8652344 0.4570313 -0.203125 0.9472656 0.25 -0.765625 -0.6367188 0.09570313 -0.1484375 -0.9863281 0.08398438 0.3476563 0 0.9375 -0.453125 -0.890625 0.02539063 0.02734375 -0.921875 0.3886719 0.2519531 -0.6855469 0.6816406 0.5859375 0 0.8105469 0.2519531 0.6855469 0.6816406 0.6777344 -0.734375 0 0.5996094 0.6367188 -0.484375 0.8398438 -0.2265625 0.4921875 0.4023438 -0.9140625 -0.0546875 0.4492188 -0.6679688 0.5917969 -0.453125 0.890625 0.02539063 0.02734375 0.921875 0.3886719 0.009765625 -0.7246094 0.6894531 -0.2734375 -0.8457031 -0.4589844 0.1542969 -0.4335938 0.8886719 0.4003906 0.1054688 -0.9101563 0.9414063 0.2324219 0.2441406 0.3300781 0.0390625 0.9433594 0.6640625 -0.4785156 -0.5742188 -0.1308594 0.4042969 -0.9042969 -0.0390625 -0.3339844 0.9414063 -0.765625 0.6367188 0.09570313 -0.7207031 0 -0.6933594 -0.8984375 0 0.4394531 -0.765625 -0.6367188 0.09570313 0.4492188 -0.6679688 0.5917969 0.6640625 -0.4785156 -0.5742188 -0.1308594 0.4042969 0.9042969 0.3300781 0.0390625 -0.9433594 0.6640625 -0.4785156 0.5742188 0.9414063 0.2324219 -0.2441406 0.5996094 -0.6367188 -0.484375 0.4003906 0.1054688 -0.9101563 0.5996094 -0.6367188 -0.484375 0.1542969 -0.4335938 0.8886719 0.8398438 0.2265625 0.4921875 0.6113281 -0.6191406 0.4941406 0.8398438 -0.2265625 0.4921875 0.5996094 0.6367188 -0.484375 0.1542969 0.4335938 0.8886719 0.4003906 -0.1054688 -0.9101563 0.009765625 0.7246094 0.6894531 0.1542969 0.4335938 0.8886719 -0.2734375 0.8457031 -0.4589844 0.4003906 -0.1054688 -0.9101563 0.2988281 -0.5488281 0.7792969 0.4492188 0.6679688 0.5917969 0.4023438 0.9140625 -0.0546875 -0.1308594 0.4042969 0.9042969 -0.5566406 -0.3398438 0.7578125 -0.0390625 -0.3339844 -0.9414063 0.3300781 0.0390625 -0.9433594 -0.1308594 0.4042969 -0.9042969 0.3300781 0.0390625 0.9433594 -0.0390625 -0.3339844 0.9414063 -0.5566406 -0.3398438 -0.7578125 -0.0390625 -0.3339844 -0.9414063 0.009765625 -0.7246094 0.6894531 0.7441406 -0.4355469 0.5058594 0.4296875 -0.5683594 0.7011719 0.4296875 -0.5683594 0.7011719 0.4296875 -0.5683594 0.7011719 0.4296875 0.5683594 0.7011719 0.4296875 0.5683594 0.7011719 0.4296875 0.5683594 0.7011719 0 0.9980469 0 0 0.9980469 0 0 0.9980469 0 0 0.9980469 0</float_array>
+					<technique_common>
+						<accessor source="#all_root-mesh-normals-array" count="195" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="all_root-mesh-map-0">
+					<float_array id="all_root-mesh-map-0-array" count="390">0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.8408203 0.7050781 0.9990234 0.7021484 0.90625 0.5849609 0.9990234 0.5849609 0.9990234 0.5351563 1.092773 0.5849609 1.087891 0.5322266 1.160156 0.5214844 1.207031 0.4394531 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.28125 0.1308594 0.2802734 0.3242188 0.28125 -0.0009765625 0.28125 0 0.2822266 -0.3251953 0.2548828 0 0.01757813 -0.1240234 0.01757813 0.1240234 1.452148 0.7607422 1.452148 0.7607422 1.452148 0.7607422 1.452148 0.7607422 1.382813 0.9970703 1 0.765625 1 0.9970703 0.2773438 -0.140625 0.2773438 -0.07226563 0.2490234 -0.3037109 0.2773438 -0.002929688 0.2509766 -0.001953125 0.2519531 0.2998047 0.01757813 0.1240234 0.28125 0.1308594 0.28125 -0.0009765625 0.2802734 0.3242188 0.28125 0 0.2548828 0 0.2822266 -0.3251953 0.01757813 -0.1240234 0.6171875 0.9970703 0.6171875 0.9970703 0.6171875 0.9970703 0.6171875 0.9970703 0.5478516 0.7607422 0.2773438 -0.140625 0.2490234 -0.3037109 0.2773438 -0.07226563 0.2773438 -0.002929688 0.2773438 0.06542969 0.2519531 0.2998047 0.2763672 0.1337891 0.9179688 0.4482422 0.7949219 0.4394531 0.9101563 0.5322266 0.8417969 0.5195313 0.8251953 0.6162109 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 0.6445313 0.578125 0.5019531 0.4921875 0.6103516 0.5185547 0.6103516 0.4560547 0.75 0.4921875 0.6103516 0.4257813 1.382813 0.9970703 1.382813 0.9970703 1.382813 0.9970703 0.4619141 0.2480469 0.4619141 0.2480469 0.4619141 0.2480469 -0.3330078 0.2470703 -0.3916016 0.4042969 0 0.3945313 0 0.7099609 0.3916016 0.4042969 0.5478516 0.7607422 0.5478516 0.7607422 0.6171875 0.9970703 1.157227 0.7050781 1.176758 0.6181641 0.9990234 0.4716797 0.5693359 1.048828 0.5283203 1.046875 0.5693359 1.046875 0.5214844 1.003906 0.5693359 0.9599609 0.2509766 -0.001953125 0.01757813 -0.1240234 0.01757813 0.1240234 0.5097656 0.7099609 0.3925781 0.7099609 0.5693359 0.9580078 0.5283203 0.9599609 0.2802734 0.3330078 0.5634766 0.3330078 0.2802734 -0.09960938 0.5498047 -0.09960938 0.01757813 0.1240234 0.2509766 0.2978516 0.01757813 -0.1240234 0.2509766 -0.2978516 0.28125 -0.1318359 0.8847656 0.7421875 0.5791016 0.6679688 0.96875 0.6669922 0.8847656 0.7421875 0.4619141 0.2480469 0.01757813 0.1240234 0.2509766 -0.2978516 0.2509766 0.2978516 0.01757813 -0.1240234 0.01757813 0.1240234 0.01757813 -0.1240234 0.2509766 0.2978516 0.01757813 0.1240234 0.2509766 -0.2978516 0.01757813 -0.1240234 0.2773438 0.06542969 0.01757813 -0.1240234 0.01757813 0.1240234 0.2509766 -0.2978516 0.2509766 0.2978516 0.2802734 0.3330078 0.2802734 -0.09960938 0.5634766 0.3330078 0.5498047 -0.09960938 1.080078 0.4482422 -0.3974609 0.7099609 -0.5136719 0.7099609 0.2802734 -0.09960938 0.2783203 0.3066406 0.4990234 0.2089844 0.5537109 -0.09960938 0.2802734 -0.09960938 0.5537109 -0.09960938 0.4990234 0.2089844 0.2783203 0.3066406 0.28125 -0.1318359 0.2763672 0.1337891 0.3330078 0.2470703 -0.03515625 0.8789063 0.4941406 1 0.4941406 0.7568359 -0.03515625 0.8789063 0.4941406 0.7568359 0.4941406 1 0.6005859 0.3994141 1.399414 0.3994141 1.399414 -0.3994141 0.6005859 -0.3994141</float_array>
+					<technique_common>
+						<accessor source="#all_root-mesh-map-0-array" count="195" stride="2">
+							<param name="S" type="float" />
+							<param name="T" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="all_root-mesh-colors">
+					<float_array id="all_root-mesh-colors-array" count="585">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+					<technique_common>
+						<accessor source="#all_root-mesh-colors-array" count="195" stride="3">
+							<param name="R" type="float" />
+							<param name="G" type="float" />
+							<param name="B" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="all_root-mesh-vertices">
+					<input semantic="POSITION" source="#all_root-mesh-positions" />
+				</vertices>
+				<polylist material="mat_choropu-material" count="17">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</vcount>
+					<p>0 0 0 0 1 1 0 0 2 2 0 0 3 3 0 0 2 2 0 0 1 1 0 0 2 2 0 0 3 3 0 0 4 4 0 0 5 5 0 0 4 4 0 0 3 3 0 0 4 4 0 0 5 5 0 0 6 6 0 0 7 7 0 0 6 6 0 0 5 5 0 0 6 6 0 0 7 7 0 0 8 5 0 0 9 7 0 0 8 5 0 0 7 7 0 0 8 5 0 0 9 7 0 0 10 6 0 0 11 11 0 0 10 6 0 0 9 7 0 0 10 6 0 0 11 11 0 0 12 5 0 0 13 13 0 0 12 5 0 0 11 11 0 0 12 5 0 0 13 13 0 0 14 14 0 0 15 15 0 0 14 14 0 0 13 13 0 0 14 14 0 0 15 15 0 0 16 16 0 0 17 17 0 0 16 16 0 0 15 15 0 0 16 16 0 0 17 17 0 0 18 18 0 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="14">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3</vcount>
+					<p>6 6 0 0 8 5 0 0 4 4 0 0 19 4 0 0 4 4 0 0 8 5 0 0 4 4 0 0 19 4 0 0 20 20 0 0 21 21 0 0 20 20 0 0 19 4 0 0 20 20 0 0 21 21 0 0 22 22 0 0 23 23 0 0 22 22 0 0 21 21 0 0 22 22 0 0 23 23 0 0 24 22 0 0 25 25 0 0 24 22 0 0 23 23 0 0 24 22 0 0 25 25 0 0 26 26 0 0 27 27 0 0 26 26 0 0 25 25 0 0 26 26 0 0 27 27 0 0 28 28 0 0 29 29 0 0 28 28 0 0 27 27 0 0 28 28 0 0 29 29 0 0 30 30 0 0 18 18 0 0 30 30 0 0 29 29 0 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="7">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3 3 3 3 3</vcount>
+					<p>1 1 0 0 31 31 0 0 3 3 0 0 32 32 0 0 3 3 0 0 31 31 0 0 3 3 0 0 32 32 0 0 5 5 0 0 33 33 0 0 5 5 0 0 32 32 0 0 5 5 0 0 33 33 0 0 7 7 0 0 34 34 0 0 7 7 0 0 33 33 0 0 7 7 0 0 34 34 0 0 35 35 0 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="7">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3 3 3 3 3</vcount>
+					<p>36 36 36 0 37 37 37 0 38 38 38 0 39 39 39 0 38 38 38 0 37 37 37 0 38 38 38 0 39 39 39 0 40 40 40 0 41 41 41 0 40 40 40 0 39 39 39 0 40 40 40 0 41 41 41 0 42 42 42 0 0 0 43 0 42 42 42 0 41 41 41 0 42 42 42 0 0 0 43 0 44 44 44 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="7">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3 3 3 3 3</vcount>
+					<p>23 23 0 0 12 5 0 0 25 25 0 0 45 45 0 0 25 25 0 0 12 5 0 0 25 25 0 0 45 45 0 0 46 46 0 0 14 14 0 0 46 46 0 0 45 45 0 0 46 46 0 0 14 14 0 0 47 47 0 0 16 16 0 0 47 47 0 0 14 14 0 0 47 47 0 0 16 16 0 0 18 18 0 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="6">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3 3 3 3</vcount>
+					<p>20 20 0 0 22 22 0 0 44 44 0 0 49 49 0 0 44 44 0 0 22 22 0 0 44 44 0 0 49 49 0 0 50 42 0 0 51 51 0 0 50 42 0 0 49 49 0 0 50 42 0 0 51 51 0 0 52 51 0 0 53 53 0 0 52 51 0 0 51 51 0 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="6">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3 3 3 3</vcount>
+					<p>54 54 54 0 55 55 55 0 56 56 56 0 57 57 57 0 56 56 56 0 55 55 55 0 56 56 56 0 57 57 57 0 58 58 58 0 59 59 59 0 58 58 58 0 57 57 57 0 58 58 58 0 59 59 59 0 60 60 60 0 61 61 61 0 60 60 60 0 59 59 59 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="5">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3 3 3</vcount>
+					<p>62 62 62 0 63 63 62 0 64 64 62 0 65 65 62 0 64 64 62 0 63 63 62 0 64 64 62 0 65 65 62 0 66 66 66 0 67 29 67 0 66 66 66 0 65 65 62 0 66 66 66 0 67 29 67 0 68 68 68 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="5">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3 3 3</vcount>
+					<p>2 2 69 0 20 20 70 0 71 71 71 0 72 72 72 0 71 71 71 0 20 20 70 0 71 71 71 0 72 72 72 0 73 73 73 0 74 74 74 0 73 73 73 0 72 72 72 0 73 73 73 0 74 74 74 0 75 75 61 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="5">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3 3 3</vcount>
+					<p>76 76 54 0 77 77 56 0 78 78 55 0 79 79 57 0 78 78 55 0 77 77 56 0 78 78 55 0 79 79 57 0 80 80 59 0 81 81 58 0 80 80 59 0 79 79 57 0 80 80 59 0 81 81 58 0 82 82 60 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="5">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3 3 3</vcount>
+					<p>83 83 83 0 84 84 83 0 85 85 83 0 68 68 68 0 85 85 83 0 84 84 83 0 85 85 83 0 68 68 68 0 86 86 83 0 67 29 67 0 86 86 83 0 68 68 68 0 86 86 83 0 67 29 67 0 87 87 87 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="5">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3 3 3</vcount>
+					<p>34 34 69 0 89 89 71 0 35 35 70 0 91 91 72 0 35 35 70 0 89 89 71 0 35 35 70 0 91 91 72 0 92 92 92 0 93 93 74 0 92 92 92 0 91 91 72 0 92 92 92 0 93 93 74 0 94 94 94 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="5">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3 3 3</vcount>
+					<p>53 53 95 0 92 92 96 0 97 53 97 0 94 94 98 0 97 53 97 0 92 92 96 0 97 53 97 0 94 94 98 0 38 38 38 0 99 99 99 0 38 38 38 0 94 94 98 0 38 38 38 0 99 99 99 0 36 36 36 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="5">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3 3 3</vcount>
+					<p>11 11 0 0 35 35 0 0 100 15 0 0 92 92 0 0 100 15 0 0 35 35 0 0 100 15 0 0 92 92 0 0 102 17 0 0 53 53 0 0 102 17 0 0 92 92 0 0 102 17 0 0 53 53 0 0 51 51 0 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="4">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3 3</vcount>
+					<p>18 18 0 0 29 29 0 0 47 47 0 0 27 27 0 0 47 47 0 0 29 29 0 0 47 47 0 0 27 27 0 0 46 46 0 0 25 25 0 0 46 46 0 0 27 27 0 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="4">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3 3</vcount>
+					<p>103 46 103 0 104 104 104 0 105 105 105 0 106 39 106 0 105 105 105 0 104 104 104 0 105 105 105 0 106 39 106 0 107 107 107 0 108 37 108 0 107 107 107 0 106 39 106 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="4">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3 3</vcount>
+					<p>62 62 62 0 64 64 62 0 109 109 66 0 110 110 66 0 109 109 66 0 64 64 62 0 109 109 66 0 110 110 66 0 111 111 66 0 68 68 68 0 111 111 66 0 110 110 66 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="4">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3 3</vcount>
+					<p>94 94 0 0 34 34 0 0 99 99 0 0 33 33 0 0 99 99 0 0 34 34 0 0 99 99 0 0 33 33 0 0 36 36 0 0 32 32 0 0 36 36 0 0 33 33 0 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="3">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3</vcount>
+					<p>18 18 115 0 17 17 116 0 30 30 117 0 51 51 118 0 30 30 117 0 17 17 116 0 30 30 117 0 51 51 118 0 119 49 119 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="3">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3</vcount>
+					<p>87 87 87 0 120 120 87 0 121 121 87 0 122 122 83 0 121 121 87 0 120 120 87 0 121 121 87 0 122 122 83 0 83 83 83 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="3">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3</vcount>
+					<p>83 83 83 0 85 85 83 0 121 121 87 0 86 86 83 0 121 121 87 0 85 85 83 0 121 121 87 0 86 86 83 0 87 87 87 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="3">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3</vcount>
+					<p>39 39 39 0 37 37 37 0 41 41 41 0 31 31 123 0 41 41 41 0 37 37 37 0 41 41 41 0 31 31 123 0 1 1 124 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="3">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3</vcount>
+					<p>38 38 38 0 40 40 40 0 97 53 97 0 52 51 125 0 97 53 97 0 40 40 40 0 97 53 97 0 52 51 125 0 53 53 95 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="3">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3</vcount>
+					<p>126 126 126 0 127 127 127 0 128 128 128 0 129 129 129 0 128 128 128 0 127 127 127 0 128 128 128 0 129 129 129 0 130 130 130 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="3">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3</vcount>
+					<p>91 91 72 0 89 89 71 0 131 131 73 0 132 132 60 0 131 131 73 0 89 89 71 0 131 131 73 0 132 132 60 0 133 133 61 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="3">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3</vcount>
+					<p>17 17 0 0 15 15 0 0 100 15 0 0 13 13 0 0 100 15 0 0 15 15 0 0 100 15 0 0 13 13 0 0 11 11 0 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>22 22 134 0 119 49 119 0 49 49 135 0 51 51 118 0 49 49 135 0 119 49 119 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>136 136 136 0 130 130 130 0 137 137 137 0 129 129 129 0 137 137 137 0 130 130 130 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>0 0 138 0 2 2 139 0 74 74 140 0 71 71 141 0 74 74 140 0 2 2 139 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>82 82 61 0 81 81 143 0 144 144 60 0 78 78 145 0 144 144 60 0 81 81 143 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>79 79 57 0 77 77 56 0 81 81 58 0 146 146 146 0 81 81 58 0 77 77 56 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>7 7 0 0 35 35 0 0 9 7 0 0 11 11 0 0 9 7 0 0 35 35 0 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>36 36 147 0 32 32 148 0 37 37 149 0 31 31 147 0 37 37 149 0 32 32 148 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>28 28 0 0 119 49 0 0 26 26 0 0 24 22 0 0 26 26 0 0 119 49 0 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>78 78 55 0 80 80 59 0 144 144 61 0 82 82 60 0 144 144 61 0 80 80 59 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>55 55 145 0 58 58 143 0 61 61 60 0 60 60 61 0 61 61 60 0 58 58 143 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>75 75 61 0 157 157 60 0 73 73 73 0 71 71 71 0 73 73 73 0 157 157 60 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>71 71 143 0 157 157 61 0 74 74 145 0 75 75 60 0 74 74 145 0 157 157 61 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>20 20 70 0 44 44 92 0 72 72 72 0 74 74 74 0 72 72 72 0 44 44 92 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>133 133 60 0 132 132 61 0 93 93 145 0 89 89 143 0 93 93 145 0 132 132 61 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>94 94 138 0 93 93 140 0 34 34 139 0 89 89 141 0 34 34 139 0 93 93 140 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>61 61 61 0 59 59 59 0 55 55 55 0 57 57 57 0 55 55 55 0 59 59 59 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>64 64 62 0 66 66 66 0 110 110 66 0 68 68 68 0 110 110 66 0 66 66 66 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>40 40 40 0 42 42 42 0 52 51 125 0 50 42 171 0 52 51 125 0 42 42 42 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>91 91 72 0 131 131 73 0 93 93 74 0 133 133 61 0 93 93 74 0 131 131 73 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>10 6 0 0 12 5 0 0 21 21 0 0 23 23 0 0 21 21 0 0 12 5 0 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>8 5 0 0 10 6 0 0 19 4 0 0 21 21 0 0 19 4 0 0 10 6 0 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3</vcount>
+					<p>51 51 118 0 17 17 116 0 102 17 172 0 100 15 173 0 102 17 172 0 17 17 116 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="2">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>4 4</vcount>
+					<p>55 55 140 0 54 54 175 0 176 176 176 0 58 58 177 0 78 78 140 0 81 81 177 0 146 146 176 0 76 76 175 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="12">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>3 3 3 3 3 3 3 3 3 3 3 3</vcount>
+					<p>176 176 146 0 56 56 56 0 58 58 58 0 41 41 41 0 1 1 124 0 0 0 43 0 42 42 42 0 44 44 44 0 50 42 171 0 74 74 74 0 44 44 92 0 0 0 94 0 108 37 108 0 106 39 106 0 104 104 104 0 105 105 105 0 107 107 107 0 103 46 103 0 12 5 0 0 14 14 0 0 45 45 0 0 4 4 0 0 20 20 0 0 2 2 0 0 119 49 0 0 22 22 0 0 24 22 0 0 30 30 117 0 119 49 119 0 28 28 184 0 185 185 185 0 186 185 186 0 187 185 187 0 188 188 185 0 189 188 187 0 190 188 186 0</p>
+				</polylist>
+				<polylist material="mat_choropu-material" count="1">
+					<input semantic="VERTEX" source="#all_root-mesh-vertices" offset="0" />
+					<input semantic="NORMAL" source="#all_root-mesh-normals" offset="1" />
+					<input semantic="TEXCOORD" source="#all_root-mesh-map-0" offset="2" set="0" />
+					<input semantic="COLOR" source="#all_root-mesh-colors" offset="3" />
+					<vcount>4</vcount>
+					<p>191 191 191 0 192 191 192 0 193 191 193 0 194 191 194 0</p>
+				</polylist>
+			</mesh>
+		</geometry>
+	</library_geometries>
+	<library_controllers>
+		<controller id="all_root-skin" name="skinCluster_all_root">
+			<skin source="#all_root-mesh">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="all_root-skin-joints">
+					<IDREF_array id="all_root-skin-joints-array" count="8">all_root backbone L_foot L_hand R_foot R_hand head hole</IDREF_array>
+					<technique_common>
+						<accessor source="#all_root-skin-joints-array" count="8" stride="1">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<!--The inverse bind pose for a joint is given by the inverse bind pose of the parent joint (where present) multiplied by the inverse of the current joint's transformation matrix.-->
+				<source id="all_root-skin-bind_poses">
+					<float_array id="all_root-skin-bind_poses-array" count="128">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 -4.371139E-08 1 0 -7.5 -1 -4.371139E-08 0 3.278354E-07 0 0 1 0 0 0 0 1 0.642657 0 0.766154 -2.008303 0 1 0 -0.625 -0.766154 0 0.642657 2.394231 0 0 0 1 1 0 0 -6.25 0 1 0 -9.375 0 0 1 0 0 0 0 1 -0.642657 -5.618286E-08 0.766154 -2.008303 -2.044347E-08 1 5.618286E-08 -0.625 -0.766154 2.044347E-08 -0.642657 -2.394231 0 0 0 1 -1 -8.742278E-08 0 -6.25 8.742278E-08 -1 0 9.375 0 0 1 0 0 0 0 1 -4.371139E-08 1 0 -10.625 -1 -4.371139E-08 0 3.278354E-07 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 -1.25 0 0 1 0 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#all_root-skin-bind_poses-array" count="8" stride="16">
+							<param name="TRANSFORM" type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="all_root-skin-weights">
+					<!--The BMD format does not have any concept of 'weights', instead each vertex is assigned to one bone-->
+					<float_array id="all_root-skin-weights-array" count="1">1</float_array>
+					<technique_common>
+						<accessor source="#all_root-skin-weights-array" count="1" stride="1">
+							<param name="WEIGHT" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#all_root-skin-joints" />
+					<input semantic="INV_BIND_MATRIX" source="#all_root-skin-bind_poses" />
+				</joints>
+				<!--Each vertex will be assigned to only one bone with a weight of 1-->
+				<vertex_weights count="195">
+					<input semantic="JOINT" source="#all_root-skin-joints" offset="0" />
+					<input semantic="WEIGHT" source="#all_root-skin-weights" offset="1" />
+					<vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+					<!--This list contains two values for each vertex, the first is the bone ID and the second is the index of the vertex weight '1' (0)-->
+					<v>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 6 0 6 0 6 0 6 0 6 0 6 0 6 0 6 0 6 0 1 0 1 0 6 0 6 0 6 0 6 0 6 0 6 0 6 0 6 0 6 0 6 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 6 0 6 0 6 0 1 0 6 0 1 0 6 0 1 0 1 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 6 0 6 0 6 0 6 0 6 0 6 0 6 0 1 0 1 0 3 0 3 0 3 0 3 0 3 0 4 0 4 0 4 0 4 0 4 0 4 0 4 0 6 0 6 0 6 0 6 0 6 0 1 0 5 0 1 0 5 0 1 0 5 0 1 0 1 0 1 0 1 0 1 0 1 0 6 0 1 0 6 0 6 0 6 0 6 0 6 0 6 0 6 0 6 0 6 0 6 0 1 0 1 0 1 0 6 0 6 0 6 0 6 0 6 0 6 0 6 0 6 0 1 0 1 0 1 0 6 0 6 0 6 0 6 0 6 0 5 0 5 0 5 0 6 0 6 0 6 0 6 0 1 0 1 0 3 0 3 0 4 0 4 0 4 0 4 0 4 0 1 0 1 0 1 0 1 0 6 0 4 0 2 0 2 0 2 0 2 0 3 0 3 0 3 0 3 0 3 0 1 0 5 0 5 0 5 0 5 0 1 0 5 0 1 0 5 0 1 0 6 0 6 0 2 0 2 0 2 0 2 0 4 0 4 0 4 0 4 0 2 0 1 0 6 0 6 0 6 0 6 0 6 0 6 0 6 0 7 0 7 0 7 0 7 0</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+	</library_controllers>
+	<library_visual_scenes>
+		<visual_scene id="Scene" name="Scene">
+			<!--This lists each of the 'bones' in the BMD model, listing each bone's individual Scale, Rotation, Translation transformation in the reverse of the order in which they should be multiplied to form an SRT  matrix. This will then be multiplied recursively by the parents' transformations to get the final transformation for this joint.-->
+			<node id="all_root" name="all_root" sid="all_root" type="JOINT">
+				<translate sid="translate">0 0 0</translate>
+				<rotate sid="rotationZ">0 0 1 0</rotate>
+				<rotate sid="rotationY">0 1 0 0</rotate>
+				<rotate sid="rotationX">1 0 0 0</rotate>
+				<scale sid="scale">1 1 1</scale>
+				<node id="backbone" name="backbone" sid="backbone" type="JOINT">
+					<translate sid="translate">0 7.5 0</translate>
+					<rotate sid="rotationZ">0 0 1 90</rotate>
+					<rotate sid="rotationY">0 1 0 0</rotate>
+					<rotate sid="rotationX">1 0 0 0</rotate>
+					<scale sid="scale">1 1 1</scale>
+					<node id="L_foot" name="L_foot" sid="L_foot" type="JOINT">
+						<translate sid="translate">-6.875 -3.125 0</translate>
+						<rotate sid="rotationZ">0 0 1 -90</rotate>
+						<rotate sid="rotationY">0 1 0 -50.00977</rotate>
+						<rotate sid="rotationX">1 0 0 0</rotate>
+						<scale sid="scale">1 1 1</scale>
+					</node>
+					<node id="L_hand" name="L_hand" sid="L_hand" type="JOINT">
+						<translate sid="translate">1.875 -6.25 0</translate>
+						<rotate sid="rotationZ">0 0 1 -90</rotate>
+						<rotate sid="rotationY">0 1 0 0</rotate>
+						<rotate sid="rotationX">1 0 0 0</rotate>
+						<scale sid="scale">1 1 1</scale>
+					</node>
+					<node id="R_foot" name="R_foot" sid="R_foot" type="JOINT">
+						<translate sid="translate">-6.875 3.125 0</translate>
+						<rotate sid="rotationZ">0 0 1 90</rotate>
+						<rotate sid="rotationY">0 1 0 -50.00977</rotate>
+						<rotate sid="rotationX">1 0 0 -180</rotate>
+						<scale sid="scale">1 1 1</scale>
+					</node>
+					<node id="R_hand" name="R_hand" sid="R_hand" type="JOINT">
+						<translate sid="translate">1.875 6.25 0</translate>
+						<rotate sid="rotationZ">0 0 1 90</rotate>
+						<rotate sid="rotationY">0 1 0 0</rotate>
+						<rotate sid="rotationX">1 0 0 0</rotate>
+						<scale sid="scale">1 1 1</scale>
+					</node>
+					<node id="head" name="head" sid="head" type="JOINT">
+						<translate sid="translate">3.125 0 0</translate>
+						<rotate sid="rotationZ">0 0 1 0</rotate>
+						<rotate sid="rotationY">0 1 0 0</rotate>
+						<rotate sid="rotationX">1 0 0 0</rotate>
+						<scale sid="scale">1 1 1</scale>
+					</node>
+				</node>
+				<node id="hole" name="hole" sid="hole" type="JOINT">
+					<translate sid="translate">0 1.25 0</translate>
+					<rotate sid="rotationZ">0 0 1 0</rotate>
+					<rotate sid="rotationY">0 1 0 0</rotate>
+					<rotate sid="rotationX">1 0 0 0</rotate>
+					<scale sid="scale">1 1 1</scale>
+				</node>
+			</node>
+			<node id="all_root-node" name="all_root-node" type="NODE">
+				<instance_controller url="#all_root-skin">
+					<skeleton>#all_root</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="mat_choropu-material" target="#mat_choropu-material">
+								<bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0" />
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+		</visual_scene>
+	</library_visual_scenes>
+	<scene>
+		<instance_visual_scene url="#Scene" />
+	</scene>
+</COLLADA>
