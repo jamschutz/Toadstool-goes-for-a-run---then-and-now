@@ -5661,7 +5661,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &845941617
 Transform:
   m_ObjectHideFlags: 0
@@ -12874,6 +12874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1585124264}
   - component: {fileID: 1585124265}
+  - component: {fileID: 1585124266}
   m_Layer: 0
   m_Name: Toad (2)
   m_TagString: Untagged
@@ -12918,6 +12919,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1585124266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585124263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232db57cebebfa74c8755ca7906b1ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.755
 --- !u!1 &1586070564
 GameObject:
   m_ObjectHideFlags: 0
@@ -16557,6 +16571,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2074901998}
   - component: {fileID: 2074901999}
+  - component: {fileID: 2074902000}
   m_Layer: 0
   m_Name: Toad (1)
   m_TagString: Untagged
@@ -16601,6 +16616,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2074902000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074901997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232db57cebebfa74c8755ca7906b1ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &2080647135
 GameObject:
   m_ObjectHideFlags: 0
@@ -18253,6 +18281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543450652310944192}
   - component: {fileID: 919132148303324027}
+  - component: {fileID: 919132148303324028}
   m_Layer: 0
   m_Name: Toad
   m_TagString: Untagged
@@ -18280,6 +18309,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &919132148303324028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148303324026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232db57cebebfa74c8755ca7906b1ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.809
 --- !u!1 &919132148574628807
 GameObject:
   m_ObjectHideFlags: 0

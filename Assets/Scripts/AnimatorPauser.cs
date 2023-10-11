@@ -12,6 +12,7 @@ public class AnimatorPauser : MonoBehaviour
         anims = new List<Animator>();
         foreach(var anim in GetComponentsInChildren<Animator>()) {
             anims.Add(anim);
+            anim.enabled = false;
         }
     }
 
