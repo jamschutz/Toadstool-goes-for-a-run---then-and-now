@@ -6,6 +6,8 @@ public class CameraManager : MonoBehaviour
 {
     public Camera youngCamera;
     public Camera oldCamera;
+    public Transform youngToad;
+    public Transform oldToad;
 
 
     // singleton instance
@@ -32,5 +34,17 @@ public class CameraManager : MonoBehaviour
     public Camera GetOldCamera()
     {
         return oldCamera;
+    }
+
+
+    public Transform GetYoungToad()
+    {
+        return youngToad;
+    }
+
+
+    public Transform GetOldToad()
+    {
+        return oldToad;
     }
 }
