@@ -64,6 +64,7 @@ public class YoungSceneManager : MonoBehaviour
         skyboxForward.mainTexture = scenes[sceneIndex].skyboxFront;
         skyboxBack.mainTexture = scenes[sceneIndex].skyboxBack;
         scenes[sceneIndex].directionLight.SetActive(true);
+        scenes[sceneIndex].npcs.SetActive(true);
         youngToad.localScale = new Vector3(scenes[sceneIndex].toadSize, scenes[sceneIndex].toadSize, scenes[sceneIndex].toadSize);
     }
 
@@ -81,5 +82,6 @@ public class YoungSceneManager : MonoBehaviour
         public Texture skyboxFront;
         public Texture skyboxBack;
         public GameObject directionLight;
+        public GameObject npcs;
     }
 }
