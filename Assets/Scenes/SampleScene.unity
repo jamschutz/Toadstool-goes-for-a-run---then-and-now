@@ -4708,7 +4708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cd80e2d7a2d7b74cb507ab2c2603fb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateX: 0
+  rotateX: 10
   rotateY: 10
   maxDistance: {x: 0, y: 5.09, z: -16.97}
   minDistance: {x: 0, y: 2.55, z: -3.18}
@@ -10531,7 +10531,7 @@ MonoBehaviour:
     skyboxBack: {fileID: 2800000, guid: bdadd9b572c7a6d428b29a1ebb1364d9, type: 3}
     directionLight: {fileID: 995161438}
   - timeInScene: 5
-    toadSize: 0.84
+    toadSize: 0.7
     toadSwapper: {fileID: 738485983}
     skyboxUp: {fileID: 2800000, guid: f203d5f8cd07a574293c0f3f22eb7deb, type: 3}
     skyboxDown: {fileID: 2800000, guid: bd7e27d93690571498ee80783527b31c, type: 3}
@@ -30119,8 +30119,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903736048}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.17714308, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -34450,7 +34450,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149359500404}
   m_LocalRotation: {x: 0, y: -0.5538275, z: 0, w: 0.8326314}
-  m_LocalPosition: {x: -87.6, y: -17, z: -497}
+  m_LocalPosition: {x: -87.6, y: -17.62, z: -497}
   m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -34851,9 +34851,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2.0785484
+  m_Height: 1.9856355
   m_Direction: 1
-  m_Center: {x: -0, y: 1.034531, z: 0}
+  m_Center: {x: 0, y: 1.0809875, z: 0}
 --- !u!33 &942389057690005968
 MeshFilter:
   m_ObjectHideFlags: 0

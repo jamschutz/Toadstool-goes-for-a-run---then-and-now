@@ -47,7 +47,14 @@ public class MoveCamera : MonoBehaviour
         if(Input.GetKey(KeyCode.RightArrow)) {
             angleY += rotateY * Time.deltaTime;
         }
-        angleX -= Input.GetAxis("Mouse Y") * rotateX * Time.deltaTime;
+        if(Input.GetKey(KeyCode.UpArrow)) {
+            angleX += rotateX * Time.deltaTime;
+        }
+        if(Input.GetKey(KeyCode.DownArrow)) {
+            angleX -= rotateX * Time.deltaTime;
+        }
+        angleX = Mathf.Clamp(angleX, -15, 30);
+        // angleX -= Input.GetAxis("Mouse Y") * rotateX * Time.deltaTime;
         
         pivot.eulerAngles = new Vector3(angleX, angleY, 0);
 
