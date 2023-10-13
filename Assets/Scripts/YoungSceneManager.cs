@@ -35,7 +35,7 @@ public class YoungSceneManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKey(KeyCode.Space)) {
+        if(sceneIndex < scenes.Length && Input.GetKey(KeyCode.Space)) {
             timer += Time.deltaTime;
 
             if(timer > scenes[sceneIndex].timeInScene) {
