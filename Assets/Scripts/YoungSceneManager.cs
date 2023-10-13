@@ -22,6 +22,14 @@ public class YoungSceneManager : MonoBehaviour
     {
         sceneIndex = 0;
         timer = 0;
+
+        skyboxUp.mainTexture = scenes[sceneIndex].skyboxUp;
+        skyboxDown.mainTexture = scenes[sceneIndex].skyboxDown;
+        skyboxLeft.mainTexture = scenes[sceneIndex].skyboxLeft;
+        skyboxRight.mainTexture = scenes[sceneIndex].skyboxRight;
+        skyboxForward.mainTexture = scenes[sceneIndex].skyboxFront;
+        skyboxBack.mainTexture = scenes[sceneIndex].skyboxBack;
+        scenes[sceneIndex].directionLight.SetActive(true);
     }
 
 
@@ -39,16 +47,22 @@ public class YoungSceneManager : MonoBehaviour
 
     private void GoToNextScene()
     {
+        scenes[sceneIndex].directionLight.SetActive(false);
         scenes[sceneIndex].toadSwapper.SwapMaterials();
+
+        timer = 0;
+        sceneIndex++;
+
+        if(sceneIndex >= scenes.Length)
+            return;
+        
         skyboxUp.mainTexture = scenes[sceneIndex].skyboxUp;
         skyboxDown.mainTexture = scenes[sceneIndex].skyboxDown;
         skyboxLeft.mainTexture = scenes[sceneIndex].skyboxLeft;
         skyboxRight.mainTexture = scenes[sceneIndex].skyboxRight;
         skyboxForward.mainTexture = scenes[sceneIndex].skyboxFront;
         skyboxBack.mainTexture = scenes[sceneIndex].skyboxBack;
-
-        timer = 0;
-        sceneIndex++;
+        scenes[sceneIndex].directionLight.SetActive(true);
     }
 
 
@@ -63,5 +77,6 @@ public class YoungSceneManager : MonoBehaviour
         public Texture skyboxRight;
         public Texture skyboxFront;
         public Texture skyboxBack;
+        public GameObject directionLight;
     }
 }
