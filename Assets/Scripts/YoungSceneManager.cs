@@ -11,6 +11,7 @@ public class YoungSceneManager : MonoBehaviour
     public Material skyboxRight;
     public Material skyboxForward;
     public Material skyboxBack;
+    public Transform youngToad;
     
 
 
@@ -63,6 +64,7 @@ public class YoungSceneManager : MonoBehaviour
         skyboxForward.mainTexture = scenes[sceneIndex].skyboxFront;
         skyboxBack.mainTexture = scenes[sceneIndex].skyboxBack;
         scenes[sceneIndex].directionLight.SetActive(true);
+        youngToad.localScale = new Vector3(scenes[sceneIndex].toadSize, scenes[sceneIndex].toadSize, scenes[sceneIndex].toadSize);
     }
 
 
@@ -70,6 +72,7 @@ public class YoungSceneManager : MonoBehaviour
     public class SceneInfo
     {
         public float timeInScene;
+        public float toadSize;
         public SwapToadMaterials toadSwapper;
         public Texture skyboxUp;
         public Texture skyboxDown;

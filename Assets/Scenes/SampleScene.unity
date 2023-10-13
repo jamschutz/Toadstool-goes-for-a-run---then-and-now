@@ -10521,6 +10521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenes:
   - timeInScene: 5
+    toadSize: 0.6
     toadSwapper: {fileID: 738485983}
     skyboxUp: {fileID: 2800000, guid: 0a8c9071a4961174caa8eda805cd0964, type: 3}
     skyboxDown: {fileID: 2800000, guid: a3b5fe801c8db5147b115c176ab8de2d, type: 3}
@@ -10530,6 +10531,7 @@ MonoBehaviour:
     skyboxBack: {fileID: 2800000, guid: bdadd9b572c7a6d428b29a1ebb1364d9, type: 3}
     directionLight: {fileID: 995161438}
   - timeInScene: 5
+    toadSize: 0.84
     toadSwapper: {fileID: 738485983}
     skyboxUp: {fileID: 2800000, guid: f203d5f8cd07a574293c0f3f22eb7deb, type: 3}
     skyboxDown: {fileID: 2800000, guid: bd7e27d93690571498ee80783527b31c, type: 3}
@@ -10544,6 +10546,7 @@ MonoBehaviour:
   skyboxRight: {fileID: 2100000, guid: 27aabcfc12392614e970ed9566dab492, type: 2}
   skyboxForward: {fileID: 2100000, guid: 1edc3bcb73b801e4dac27fec3b852606, type: 2}
   skyboxBack: {fileID: 2100000, guid: 959aec9ea24669a43af378b1c4ee3898, type: 2}
+  youngToad: {fileID: 5465940246720472666}
 --- !u!1 &738664292
 GameObject:
   m_ObjectHideFlags: 0
