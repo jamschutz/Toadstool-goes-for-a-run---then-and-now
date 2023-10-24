@@ -14,6 +14,7 @@ namespace jsch
         [Header("Movement")]
         public float moveSpeed;
         public Camera camera;
+        public float maxRunTime;
 
         [Header("Physics")]
         public LayerMask groundLayerMask;
@@ -32,6 +33,8 @@ namespace jsch
         private float verticalVelocity;
         private bool isGrounded;
         private bool justJumped;
+        
+        private float timer;
 
 
     // =============================================================== //
@@ -48,6 +51,7 @@ namespace jsch
             currentMoveLerp = 0;
             verticalVelocity = 0;
             numJumpsUsed = 0;
+            timer = 0;
             justJumped = false;
         }
 
@@ -61,12 +65,19 @@ namespace jsch
             if(Input.GetKey(KeyCode.Space)) {
                 float rotation = Camera.main.transform.eulerAngles.y;
                 transform.eulerAngles = new Vector3(0, rotation, 0);
+                timer += Time.deltaTime;
+            }
+            else {
+                timer = 0;
             }
         }
 
 
         void FixedUpdate()
         {
+            if(timer > maxRunTime) {
+                return;
+            }
             Move();
         }
 

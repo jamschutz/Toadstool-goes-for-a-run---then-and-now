@@ -6,12 +6,15 @@ public class OldToadController : MonoBehaviour
 {
     public Transform target;
     public float moveSpeed;
+    public float maxRunTime;
 
     private bool firstSpace;
+    public float timer;
 
     private void Start()
     {
         firstSpace = false;
+        timer = 0;
     }
 
 
@@ -19,8 +22,15 @@ public class OldToadController : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.Space)) {
             firstSpace = true;
+            timer = 0;
             return;
         }
+        else {
+            timer += Time.deltaTime;
+        }
+
+        if(timer > maxRunTime)
+            return;
 
         if(!firstSpace)
             return;

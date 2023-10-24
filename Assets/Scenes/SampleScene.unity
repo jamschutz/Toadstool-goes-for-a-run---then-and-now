@@ -25261,6 +25261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   youngToad: {fileID: 88591010}
   oldToad: {fileID: 627283608}
+  maxRunTime: 1.5
 --- !u!4 &1565526105
 Transform:
   m_ObjectHideFlags: 0
@@ -33597,6 +33598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   music: {fileID: 1944888917}
   sfx: {fileID: 1581783164}
+  maxRunTime: 1.5
 --- !u!1 &2090501043
 GameObject:
   m_ObjectHideFlags: 0
@@ -35399,6 +35401,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 240673000}
   moveSpeed: 10
+  maxRunTime: 1.5
+  timer: 0
 --- !u!1 &919132148820028175
 GameObject:
   m_ObjectHideFlags: 0
@@ -35449,6 +35453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 8
   camera: {fileID: 302316956}
+  maxRunTime: 1.5
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
