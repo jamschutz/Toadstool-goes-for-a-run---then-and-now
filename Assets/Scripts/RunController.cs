@@ -4,27 +4,25 @@ using UnityEngine;
 
 public class RunController : MonoBehaviour
 {
-    public Animator[] animationControllers;
+    public Animator youngToad;
+    public Animator oldToad;
 
     private void Start()
     {
-        foreach(var anim in animationControllers) {
-            anim.enabled = false;
-        }
+        oldToad.enabled = false;
+        youngToad.enabled = false;
     }
 
 
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space)) {
-            foreach(var anim in animationControllers) {
-                anim.enabled = true;
-            }
+            oldToad.enabled = false;
+            youngToad.enabled = true;
         }
         if(Input.GetKeyUp(KeyCode.Space)) {
-            foreach(var anim in animationControllers) {
-                anim.enabled = false;
-            }
+            oldToad.enabled = true;
+            youngToad.enabled = false;
         }
     }
 }
