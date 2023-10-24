@@ -31,7 +31,8 @@ public class AudioController : MonoBehaviour
             timer = 0;
         }
 
-        if(timer > maxRunTime) {
+        if(TimeController.instance.TimeIsUp()) {
+            Debug.Log("TIME IS UP");
             if(sfx.isPlaying) sfx.Pause();
             if(music.isPlaying) music.Pause();
         }
