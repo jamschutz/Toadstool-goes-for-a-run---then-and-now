@@ -8,11 +8,6 @@ Shader "Hidden/Custom/CameraBlend"
         TEXTURE2D_SAMPLER2D(_MainTex, sampler_MainTex);
         TEXTURE2D_SAMPLER2D(_BlendCamera1 , sampler_BlendCamera1);
         TEXTURE2D_SAMPLER2D(_BlendCamera2 , sampler_BlendCamera2);
-        TEXTURE2D_SAMPLER2D(_BlendCamera3 , sampler_BlendCamera3);
-        TEXTURE2D_SAMPLER2D(_BlendCamera4 , sampler_BlendCamera4);
-        TEXTURE2D_SAMPLER2D(_BlendCamera5 , sampler_BlendCamera5);
-        TEXTURE2D_SAMPLER2D(_BlendCamera6 , sampler_BlendCamera6);
-        TEXTURE2D_SAMPLER2D(_BlendCamera7 , sampler_BlendCamera7);
         int _BlendMode1;
         int _BlendMode2;
         int _BlendMode3;
@@ -114,19 +109,9 @@ Shader "Hidden/Custom/CameraBlend"
             // read each camera's values
             float4 cam1 = SAMPLE_TEXTURE2D(_BlendCamera1, sampler_BlendCamera1, i.texcoord);
             float4 cam2 = SAMPLE_TEXTURE2D(_BlendCamera2, sampler_BlendCamera2, i.texcoord);
-            float4 cam3 = SAMPLE_TEXTURE2D(_BlendCamera3, sampler_BlendCamera3, i.texcoord);
-            float4 cam4 = SAMPLE_TEXTURE2D(_BlendCamera4, sampler_BlendCamera4, i.texcoord);
-            float4 cam5 = SAMPLE_TEXTURE2D(_BlendCamera5, sampler_BlendCamera5, i.texcoord);
-            float4 cam6 = SAMPLE_TEXTURE2D(_BlendCamera6, sampler_BlendCamera6, i.texcoord);
-            float4 cam7 = SAMPLE_TEXTURE2D(_BlendCamera7, sampler_BlendCamera7, i.texcoord);
 
             // then blend each camera, one by one
             cam1.rgb = blend(cam1, cam2, _BlendMode1);
-            cam1.rgb = blend(cam1, cam3, _BlendMode2);
-            cam1.rgb = blend(cam1, cam4, _BlendMode3);
-            cam1.rgb = blend(cam1, cam5, _BlendMode4);
-            cam1.rgb = blend(cam1, cam6, _BlendMode5);
-            cam1.rgb = blend(cam1, cam7, _BlendMode6);
 
             return cam1;
         }

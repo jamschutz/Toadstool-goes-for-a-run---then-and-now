@@ -24,21 +24,6 @@ public sealed class CameraBlend : PostProcessEffectSettings
 
     [Tooltip("Render texture for the camera")]
     public TextureParameter camera2 = new TextureParameter();
-
-    [Tooltip("Render texture for the camera")]
-    public TextureParameter camera3 = new TextureParameter();
-
-    [Tooltip("Render texture for the camera")]
-    public TextureParameter camera4 = new TextureParameter();
-
-    [Tooltip("Render texture for the camera")]
-    public TextureParameter camera5 = new TextureParameter();
-
-    [Tooltip("Render texture for the camera")]
-    public TextureParameter camera6 = new TextureParameter();
-
-    [Tooltip("Render texture for the camera")]
-    public TextureParameter camera7 = new TextureParameter();
 }
 
 public sealed class CameraBlendRenderer : PostProcessEffectRenderer<CameraBlend>
@@ -54,11 +39,6 @@ public sealed class CameraBlendRenderer : PostProcessEffectRenderer<CameraBlend>
         sheet.properties.SetInt("_BlendMode6", settings.blendMode6);
         sheet.properties.SetTexture("_BlendCamera1", settings.camera1);
         sheet.properties.SetTexture("_BlendCamera2", settings.camera2);
-        sheet.properties.SetTexture("_BlendCamera3", settings.camera3);
-        sheet.properties.SetTexture("_BlendCamera4", settings.camera4);
-        sheet.properties.SetTexture("_BlendCamera5", settings.camera5);
-        sheet.properties.SetTexture("_BlendCamera6", settings.camera6);
-        sheet.properties.SetTexture("_BlendCamera7", settings.camera7);
         context.command.BlitFullscreenTriangle(context.source, context.destination, sheet, 0);
     }
 }

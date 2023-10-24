@@ -31,10 +31,12 @@ public class BlackOutFader : MonoBehaviour
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space)) {
-            activeScene = ActiveScene.Left;
+            activeScene = ActiveScene.Right;
+            rightTimer = (rightTimer / oldToadController.maxRunTime) * fadeInTime;
         }
         if(Input.GetKeyUp(KeyCode.Space)) {
-            activeScene = ActiveScene.Right;
+            activeScene = ActiveScene.Left;
+            leftTimer = (leftTimer / youngToadController.maxRunTime) * fadeInTime;
         }
 
         float targetLeftTime = youngToadController.maxRunTime;

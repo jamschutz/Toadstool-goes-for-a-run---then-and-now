@@ -5040,6 +5040,8 @@ MonoBehaviour:
   m_AfterStackBundles:
   - assemblyQualifiedName: CameraBlend, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  - assemblyQualifiedName: VRamCorruption, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &302316955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12840,7 +12842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &845941617
 Transform:
   m_ObjectHideFlags: 0
@@ -14750,6 +14752,8 @@ MonoBehaviour:
   m_BeforeStackBundles: []
   m_AfterStackBundles:
   - assemblyQualifiedName: CameraBlend, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - assemblyQualifiedName: VRamCorruption, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!1 &965118051
 GameObject:
@@ -25463,7 +25467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   youngToad: {fileID: 88591010}
   oldToad: {fileID: 627283608}
-  maxRunTime: 1.5
+  maxRunTime: 5000
 --- !u!4 &1565526105
 Transform:
   m_ObjectHideFlags: 0
@@ -35685,7 +35689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 240673000}
   moveSpeed: 10
-  maxRunTime: 5
+  maxRunTime: 5000
   timer: 0
 --- !u!1 &919132148820028175
 GameObject:
@@ -35737,7 +35741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 8
   camera: {fileID: 302316956}
-  maxRunTime: 5
+  maxRunTime: 5000
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
