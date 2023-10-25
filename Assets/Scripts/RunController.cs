@@ -23,12 +23,12 @@ public class RunController : MonoBehaviour
         timer += Time.deltaTime;
         
         if(Input.GetKeyDown(KeyCode.Space)) {
-            oldToad.enabled = false;
+            oldToad.enabled = true;
             youngToad.enabled = true;
             timer = 0;
         }
         if(Input.GetKeyUp(KeyCode.Space)) {
-            oldToad.enabled = true;
+            oldToad.enabled = false;
             youngToad.enabled = false;
             timer = 0;
         }

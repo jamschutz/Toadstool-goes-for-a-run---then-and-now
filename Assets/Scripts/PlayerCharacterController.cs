@@ -63,7 +63,7 @@ namespace jsch
             if(isGrounded && !justJumped) numJumpsUsed = 0;
 
             if(Input.GetKey(KeyCode.Space)) {
-                float rotation = Camera.main.transform.eulerAngles.y;
+                float rotation = camera.transform.eulerAngles.y;
                 transform.eulerAngles = new Vector3(0, rotation, 0);
                 timer += Time.deltaTime;
             }
