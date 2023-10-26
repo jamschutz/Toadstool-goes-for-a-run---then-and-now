@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class YoungSceneManager : MonoBehaviour
 {
@@ -64,7 +65,10 @@ public class YoungSceneManager : MonoBehaviour
         skyboxForward.mainTexture = scenes[sceneIndex].skyboxFront;
         skyboxBack.mainTexture = scenes[sceneIndex].skyboxBack;
         scenes[sceneIndex].directionLight.SetActive(true);
-        scenes[sceneIndex].npcs.SetActive(true);
+        if(scenes[sceneIndex].npcs != null)
+            scenes[sceneIndex].npcs.SetActive(true);
+        if(scenes[sceneIndex].eventOnActive != null)
+            scenes[sceneIndex].eventOnActive.Invoke();
         youngToad.localScale = new Vector3(scenes[sceneIndex].toadSize, scenes[sceneIndex].toadSize, scenes[sceneIndex].toadSize);
     }
 
@@ -83,5 +87,6 @@ public class YoungSceneManager : MonoBehaviour
         public Texture skyboxBack;
         public GameObject directionLight;
         public GameObject npcs;
+        public UnityEvent eventOnActive;
     }
 }

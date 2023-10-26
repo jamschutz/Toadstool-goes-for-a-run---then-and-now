@@ -7,6 +7,7 @@ public class MoveCamera : MonoBehaviour
     [Header("Controls")]
     public float rotateX;
     public float rotateY;
+    public bool rotateAlways = true;
 
     [Header("Zoom")]
     public Vector3 maxDistance;
@@ -40,23 +41,26 @@ public class MoveCamera : MonoBehaviour
 
     void Update()
     {
+        bool isSpaceDown = Input.GetKey(KeyCode.Space);
         // rotate camera
-        if(Input.GetKey(KeyCode.LeftArrow)) {
-            angleY -= rotateY * Time.deltaTime;
+        if(isSpaceDown || rotateAlways) {
+            if(Input.GetKey(KeyCode.LeftArrow)) {
+                angleY -= rotateY * Time.deltaTime;
+            }
+            if(Input.GetKey(KeyCode.RightArrow)) {
+                angleY += rotateY * Time.deltaTime;
+            }
+            if(Input.GetKey(KeyCode.UpArrow)) {
+                angleX += rotateX * Time.deltaTime;
+            }
+            if(Input.GetKey(KeyCode.DownArrow)) {
+                angleX -= rotateX * Time.deltaTime;
+            }
+            angleX = Mathf.Clamp(angleX, -15, 30);
+            
+            pivot.eulerAngles = new Vector3(angleX, angleY, 0);
         }
-        if(Input.GetKey(KeyCode.RightArrow)) {
-            angleY += rotateY * Time.deltaTime;
-        }
-        if(Input.GetKey(KeyCode.UpArrow)) {
-            angleX += rotateX * Time.deltaTime;
-        }
-        if(Input.GetKey(KeyCode.DownArrow)) {
-            angleX -= rotateX * Time.deltaTime;
-        }
-        angleX = Mathf.Clamp(angleX, -15, 30);
-        // angleX -= Input.GetAxis("Mouse Y") * rotateX * Time.deltaTime;
         
-        pivot.eulerAngles = new Vector3(angleX, angleY, 0);
 
         // move camera
         float fadeTime;

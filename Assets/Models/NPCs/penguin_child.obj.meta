@@ -3,7 +3,17 @@ guid: 83e99e236721d2342aaeff6ea96aec45
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_penguin_child
+    second: {fileID: 2100000, guid: dbae2a70d48468f4ab815c7a509f43a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_penguin_child_eyes
+    second: {fileID: 2100000, guid: fa58f50c180075745a8f42093a0aa5e6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
